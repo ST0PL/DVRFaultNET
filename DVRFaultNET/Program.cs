@@ -2,6 +2,7 @@
 using System.Net;
 using System.Text;
 using System.Linq;
+using System.Globalization;
 using System.Collections.Generic;
 using DVRFaultNET;
 
@@ -14,7 +15,7 @@ namespace DVRFault
         static void Main(string[] args)
         {
             List<Localization> locales = Localization.GetLocale();
-            Localization = locales.First(x=>x.LocaleName=="ru-RU");
+            Localization = locales.First(x=>x.LocaleName==CultureInfo.CurrentUICulture.Name);
             PrintLogo();
             Console.Write($"{Localization.LocaleValues["Input"]}: ");
             string Address = Console.ReadLine();
