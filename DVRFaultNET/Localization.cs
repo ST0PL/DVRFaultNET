@@ -60,7 +60,7 @@ namespace DVRFaultNET
                 return localization;
             }
             WriteLocale(_defaultLocales);
-            return GetLocale();
+            return _defaultLocales;
 
         }
         public static string WriteLocale(List<Localization> localization)
@@ -76,3 +76,4 @@ namespace DVRFaultNET
         }
     }
 }
+
