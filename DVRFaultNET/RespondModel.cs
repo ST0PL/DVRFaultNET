@@ -1,7 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
 using System.Collections.Generic;
-using Newtonsoft.Json;
-using System.Text;
 
 namespace DVRFault
 {
@@ -12,9 +10,7 @@ namespace DVRFault
 
 
         public static RespondModel GetResult(string Json)
-        {
-            return JsonConvert.DeserializeObject<RespondModel>(Json);
-        }
+            => JsonConvert.DeserializeObject<RespondModel>(Json);
 
     }
 }

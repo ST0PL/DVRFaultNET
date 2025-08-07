@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Net;
-using System.Text;
-using System.Linq;
 using System.Globalization;
+using System.Linq;
 using System.Collections.Generic;
+using System.Text;
 using DVRFaultNET;
 
 namespace DVRFault
@@ -107,7 +106,7 @@ namespace DVRFault
 /_.___/\__, /   /____//_/  \____/_/         /_____/
       /____/                                       
                 ");
-            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Gray;
         }
     }
 }
